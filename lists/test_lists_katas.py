@@ -40,7 +40,7 @@ class ListKatasTestCase(unittest.TestCase):
     def test_list_comprehension_filter_on_a_property(self):
         persons = [{'name': 'A', 'age': 16}, {'name': 'B', 'age': 22}, {'name': 'C', 'age': 40}]
 
-        over_18_ages = [person for person in persons]
+        over_18_ages = [person for person in persons if False]
         self.assertListEqual(over_18_ages, [22, 40])
 
     def test_list_comprehensions_multiply_a_property(self):
