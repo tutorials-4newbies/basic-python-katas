@@ -23,7 +23,6 @@ class ListKatasTestCase(unittest.TestCase):
     def test_simple_list_slicing(self):
         pass
 
-
     def test_list_slicing_from_the_middle(self):
         pass
 
@@ -48,5 +47,3 @@ class ListKatasTestCase(unittest.TestCase):
         numbers = [1, 2, 3, 4, 5]
         multiplied = [x for x in numbers]
         self.assertListEqual(multiplied, [2, 4, 6, 8, 10])
-
-
