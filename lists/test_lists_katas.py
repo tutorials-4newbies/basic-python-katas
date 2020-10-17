@@ -43,7 +43,12 @@ class ListKatasTestCase(unittest.TestCase):
         over_18_ages = [person for person in persons if False]
         self.assertListEqual(over_18_ages, [22, 40])
 
-    def test_list_comprehensions_multiply_a_property(self):
+    def test_list_comprehensions_multiply_elements(self):
         numbers = [1, 2, 3, 4, 5]
         multiplied = [x for x in numbers]
         self.assertListEqual(multiplied, [2, 4, 6, 8, 10])
+
+    def test_list_comprehensions_multiply_only_even_elements(self):
+        numbers = [1, 2, 3, 4, 5]
+        multiplied = [x for x in numbers if True]
+        self.assertListEqual(multiplied, [4, 8])
