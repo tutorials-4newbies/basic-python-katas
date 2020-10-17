@@ -15,6 +15,23 @@ class ListKatasTestCase(unittest.TestCase):
         mothers.do_something()
         self.assertListEqual(mothers, ['Sara', 'Rivka', 'Rachel'], 'the lists were supposed to be equal')
 
+    def test_removing_a_specific_value_from_list(self):
+        mothers = ['Sara', 'Rivka', 'Rachel', 'Lea']
+        mothers.do_something('Rivka')
+        self.assertListEqual(mothers, ['Sara', 'Rachel', 'Lea'], 'the lists were supposed to be equal')
+
+    def test_simple_list_slicing(self):
+        pass
+
+
+    def test_list_slicing_from_the_middle(self):
+        pass
+
+    def test_list_comprehension_lower_casing_strings(self):
+        mothers = ['Sara', 'Rivka', 'Rachel', 'Lea']
+        names = [name for name in mothers]
+        self.assertListEqual(names, ['sara', 'rachel', 'lea'], 'the lists were supposed to be equal')
+
     def test_list_comprehension_get_a_property_from_a_list_of_dict(self):
         persons = [{'name': 'A', 'age': 20}, {'name': 'B', 'age': 22}]
 
@@ -31,3 +48,5 @@ class ListKatasTestCase(unittest.TestCase):
         numbers = [1, 2, 3, 4, 5]
         multiplied = [x for x in numbers]
         self.assertListEqual(multiplied, [2, 4, 6, 8, 10])
+
+
